@@ -1,0 +1,11 @@
+mixin programForm(program = {})
+    form.max__weights(action=`/program/${program._id || ''}` method="POST")
+        label(for="name") Program Name
+        input(type="text" name="name" value=program.name)
+        label(for="squat") Squat Max (lbs)
+        input(type="number" name="squat" id="squat" value=program.squat)
+        label(for="benchpress") Bench Press Max (lbs)
+        input(type="number" name="benchpress" id="benchpress" value=program.benchpress)
+        label(for="deadlift") Deadlift Max (lbs)
+        input(type="number" name="deadlift" id="deadlift" value=program.deadlift)
+        input(type="submit" value="Submit")

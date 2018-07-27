@@ -1,0 +1,12 @@
+
+mixin programCard(program = {})
+  .store
+    .store__hero
+      .store__actions
+        .store__action.store__action--edit
+          a(href=`/programs/${program._id}/edit`) Edit Program
+            
+      img(src=`/uploads/${program.photo || 'program.png'}`)
+      h2.title
+        a(href=`/program/${program.slug}`) #{program.name}
+      

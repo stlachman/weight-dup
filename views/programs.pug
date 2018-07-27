@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/_programCard
+
+block content
+  .inner
+    h2= title
+    .stores
+      each program in programs
+        +programCard(program)

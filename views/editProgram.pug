@@ -1,0 +1,13 @@
+extends layout
+
+include mixins/_programForm
+
+block content
+    .inner
+        h2= title
+        p Type your 1 rep-max (RM) in the shaded boxes in the table on the right in pounds (unfortunately due to a glitch when I upload to drop box only a 1rm will work here). The days of the week you are to train are set. The schedule must go in the order of the days listed. You can start any day you'd like if the days off are kept in the same order. 
+        +programForm(program)
+
+        .starting-squat
+        .starting-bench
+        .starting-deadlift

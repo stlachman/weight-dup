@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -98,20 +98,56 @@ exports.$$ = $$;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+// const startWeight = document.getElementById('lbs');
+// startWeight.addEventListener("keyup", function getValue() {
+//   const text = this.value;
+//   document.querySelector(".starting-weight").innerHTML = text;  
+// });
+
+function startweight(v) {
+    v.on("keyup", function () {
+        var weight = this.value;
+        document.querySelector(".starting-weight").innerHTML = weight;
+    });
+    getValue(weight);
+    // input.on("keyup", alert('Helloo'));
+    // alert('hello');
+}
+
+exports.default = startweight;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
 
 var _bling = __webpack_require__(0);
+
+var _weight = __webpack_require__(1);
+
+var _weight2 = _interopRequireDefault(_weight);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _weight2.default)((0, _bling.$)('#lbs'));
 
 /***/ })
 /******/ ]);
